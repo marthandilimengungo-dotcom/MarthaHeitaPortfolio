@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⏰ Digital Clock</h1>
+            <p class="subtitle">Current time in different time zones</p>
+        </div>
+
+        <div class="controls">
+            <div class="format-toggle">
+                <label for="formatToggle">
+                    <input type="checkbox" id="formatToggle" checked>
+                    <span>12-Hour Format</span>
+                </label>
+            </div>
+            
+            <div class="timezone-selector">
+                <label for="addTimezone">Add Time Zone:</label>
+                <select id="addTimezone" class="timezone-dropdown">
+                    <option value="">-- Select a time zone --</option>
+                </select>
+                <button id="addBtn" class="add-timezone-btn">Add</button>
+            </div>
+        </div>
+
+        <div class="clocks-container" id="clocksContainer">
+            <!-- Clocks will be dynamically inserted here -->
+        </div>
+
+        <div class="local-clock-section">
+            <h2>Your Local Time</h2>
+            <div class="local-clock-card">
+                <div class="timezone-name" id="localTimezone">Loading...</div>
+                <div class="digital-display" id="localClock">00:00:00</div>
+                <div class="date-display" id="localDate">Loading...</div>
+            </div>
+        </div>
+
+        <button id="resetBtn" class="reset-btn">Reset to Default</button>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
